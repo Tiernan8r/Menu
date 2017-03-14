@@ -1,0 +1,19 @@
+main: me.Tiernanator.Menu.Main
+version: 1.0
+name: PlayerMenu
+description: A Plugin that gives a useful menu
+load: POSTWORLD
+author: Tiernanator
+website: None
+database: false
+depend: [Utilities, Zoning, Factions, Me-conomics]
+prefix: Menu
+softdepend: []
+loadbefore: []
+commands:
+    menu:
+        description: Brings up a useful menu.
+    spawn:
+        description: Teleports you to spawn.
+    home:
+        description: Teleports you to your bed.
