@@ -6,7 +6,7 @@ import me.Tiernanator.Menu.Commands.Home;
 import me.Tiernanator.Menu.Commands.Spawn;
 import me.Tiernanator.Menu.MenuAPI.PlayerMenu;
 
-public class Main extends JavaPlugin {
+public class MenuMain extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {

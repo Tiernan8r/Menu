@@ -21,7 +21,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
 import me.Tiernanator.Meconomics.Currency;
-import me.Tiernanator.Menu.Main;
+import me.Tiernanator.Menu.MenuMain;
 import me.Tiernanator.Menu.Menu;
 import me.Tiernanator.Menu.MenuAction;
 import me.Tiernanator.Menu.MenuEntry;
@@ -31,9 +31,9 @@ import me.Tiernanator.Zoning.Zone.Zone;
 
 public class PlayerMenu implements CommandExecutor {
 
-	private static Main plugin;
+	private static MenuMain plugin;
 
-	public PlayerMenu(Main main) {
+	public PlayerMenu(MenuMain main) {
 		plugin = main;
 	}
 
@@ -119,6 +119,7 @@ public class PlayerMenu implements CommandExecutor {
 		if (allZones != null) {
 			for (Zone zone : allZones) {
 				String displayName = zone.getDisplayName();
+				displayName = displayName.replaceAll("_", " ");
 				String name = ChatColor.AQUA + displayName;
 				Location teleportLocation = zone.getCentre();
 				MenuEntry zoneEntry = new MenuEntry(name,

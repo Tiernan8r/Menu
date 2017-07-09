@@ -1,4 +1,4 @@
-main: me.Tiernanator.Menu.Main
+main: me.Tiernanator.Menu.MenuMain
 version: 1.0
 name: PlayerMenu
 description: A Plugin that gives a useful menu
