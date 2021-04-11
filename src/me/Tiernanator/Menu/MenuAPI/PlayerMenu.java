@@ -22,13 +22,14 @@ import me.Tiernanator.Factions.Factions.Faction;
 import me.Tiernanator.Factions.Factions.FactionAccessor;
 import me.Tiernanator.Meconomics.Currency;
 import me.Tiernanator.Menu.MenuMain;
-import me.Tiernanator.Menu.Menu;
-import me.Tiernanator.Menu.MenuAction;
-import me.Tiernanator.Menu.MenuEntry;
 import me.Tiernanator.Permissions.Group.Group;
 import me.Tiernanator.Permissions.Group.GroupAccessor;
+import me.Tiernanator.Utilities.Menu.Menu;
+import me.Tiernanator.Utilities.Menu.MenuAction;
+import me.Tiernanator.Utilities.Menu.MenuEntry;
 import me.Tiernanator.Zoning.Zone.Zone;
 
+@SuppressWarnings("deprecation")
 public class PlayerMenu implements CommandExecutor {
 
 	private static MenuMain plugin;
@@ -59,7 +60,7 @@ public class PlayerMenu implements CommandExecutor {
 
 		List<MenuEntry> menuEntries = new ArrayList<MenuEntry>();
 		// Make a skull that can open a menu to teleport to all players;
-		ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1,
+		ItemStack skull = new ItemStack(Material.LEGACY_SKULL_ITEM, 1,
 				(short) SkullType.PLAYER.ordinal());
 		SkullMeta meta = (SkullMeta) skull.getItemMeta();
 		meta.setOwner(player.getName());
@@ -157,7 +158,7 @@ public class PlayerMenu implements CommandExecutor {
 			bedAction = MenuAction.MESSAGE;
 		}
 		MenuEntry bed = new MenuEntry(ChatColor.BLUE + "Home",
-				new ItemStack(Material.BED), bedAction, bedVariable, 2);
+				new ItemStack(Material.LEGACY_BED), bedAction, bedVariable, 2);
 		menuEntries.add(bed);
 
 		String playerUUID = player.getUniqueId().toString();
@@ -215,7 +216,7 @@ public class PlayerMenu implements CommandExecutor {
 		Inventory workBench = Bukkit.createInventory(player,
 				InventoryType.WORKBENCH);
 		MenuEntry craftingTable = new MenuEntry(ChatColor.GRAY + "Crafting",
-				new ItemStack(Material.WORKBENCH), MenuAction.OPEN, workBench,
+				new ItemStack(Material.LEGACY_WORKBENCH), MenuAction.OPEN, workBench,
 				12);
 		menuEntries.add(craftingTable);
 
@@ -223,7 +224,7 @@ public class PlayerMenu implements CommandExecutor {
 				InventoryType.ENCHANTING);
 		MenuEntry enchantingTable = new MenuEntry(
 				ChatColor.GREEN + "Enchanting",
-				new ItemStack(Material.ENCHANTMENT_TABLE), MenuAction.OPEN,
+				new ItemStack(Material.LEGACY_ENCHANTMENT_TABLE), MenuAction.OPEN,
 				enchantingInventory, 14);
 		menuEntries.add(enchantingTable);
 

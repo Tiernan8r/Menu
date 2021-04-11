@@ -7,10 +7,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Menu.MenuMain;
-import me.Tiernanator.Packets.Titler.PlayerTitler;
-import me.Tiernanator.Packets.Titler.TitleAction;
+import me.Tiernanator.Utilities.Colours.Colour;
+import me.Tiernanator.Utilities.Packets.Titler.PlayerTitler;
+import me.Tiernanator.Utilities.Packets.Titler.TitleAction;
 
 public class Home implements CommandExecutor {
 

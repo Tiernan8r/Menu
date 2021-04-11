@@ -7,8 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Menu.MenuMain;
-import me.Tiernanator.Packets.Titler.PlayerTitler;
-import me.Tiernanator.Packets.Titler.TitleAction;
+import me.Tiernanator.Utilities.Packets.Titler.PlayerTitler;
+import me.Tiernanator.Utilities.Packets.Titler.TitleAction;
 import me.Tiernanator.Zoning.Zone.Zone;
 import me.Tiernanator.Zoning.Zone.EventCallers.Player.OnPlayerEnterLeaveZone;
 
